@@ -1,6 +1,6 @@
 {
-  "timeRange": "7d",
-  "limit": 300,
+  "timeRange": "24h",
+  "limit": 30,
   "descriptionSearch": [".NET"],
   "aiEmploymentTypeFilter": ["CONTRACTOR", "TEMPORARY"],
   "descriptionType": "text",

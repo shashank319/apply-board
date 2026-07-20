@@ -12,14 +12,14 @@ name: Refresh .NET contract jobs
 
 on:
   schedule:
-    # 3× per day at 05:00, 13:00 and 21:00 UTC.
-    # To change frequency, edit these cron lines (times are UTC).
-    #   Once daily:      - cron: '0 6 * * *'
-    #   Every 6 hours:   - cron: '0 */6 * * *'
-    #   Twice daily:     - cron: '0 6,18 * * *'
-    - cron: '0 5 * * *'
-    - cron: '0 13 * * *'
-    - cron: '0 21 * * *'
+    # Once daily at 11:00 UTC (~6 AM US-Eastern / 3 AM US-Pacific).
+    # This overnight-US slot minimizes boundary misses from the Actor's
+    # 1-2h indexing delay, and pairs with the 24h window in actor-input.json
+    # so consecutive daily runs tile perfectly with no gaps.
+    # To change frequency, edit this cron line (UTC):
+    #   Twice daily:     - cron: '0 11,23 * * *'
+    #   Every 6 hours:   - cron: '0 */6 * * *'   (⚠ raises cost ~6x)
+    - cron: '0 11 * * *'
   workflow_dispatch: {}   # allows manual "Run workflow" from the Actions tab
 
 permissions:

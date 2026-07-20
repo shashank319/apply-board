@@ -36,6 +36,14 @@ const CONTRACT_TYPES = new Set(['CONTRACTOR', 'TEMPORARY']);
 // ---- Rule 3: geographic scope --------------------------------------------
 const ALLOWED_COUNTRIES = new Set(['United States']);
 
+// ---- Rolling board settings ----------------------------------------------
+// The daily job pulls only the last 24h of NEW postings (to stay cheap) and
+// MERGES them into the existing jobs.json, so the board accumulates a rolling
+// window instead of being replaced each run. Jobs older than KEEP_DAYS (by
+// posted date) are pruned so the board stays fresh. Set MERGE=0 to disable.
+const KEEP_DAYS = Number(process.env.KEEP_DAYS || 14);
+const MERGE = process.env.MERGE !== '0';
+
 // --------------------------------------------------------------------------
 
 /** Load raw items from a file or a directory of *.json files. */
@@ -178,15 +186,44 @@ function main() {
     byUrl.set(url, job);
   }
 
-  const jobs = [...byUrl.values()].sort((a, b) => {
-    const da = a.datePosted ? Date.parse(a.datePosted) : 0;
-    const db = b.datePosted ? Date.parse(b.datePosted) : 0;
-    return db - da; // newest first
-  });
+  // Merge this run's jobs with the jobs already on the board (new data wins),
+  // then prune anything older than KEEP_DAYS so the board stays a rolling window.
+  stats.fromThisRun = byUrl.size;
+  stats.carriedOver = 0;
+  stats.prunedOld = 0;
+
+  if (MERGE && fs.existsSync(OUTPUT)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(OUTPUT, 'utf8'));
+      const prevJobs = Array.isArray(prev) ? prev : prev.jobs || [];
+      for (const pj of prevJobs) {
+        if (pj && pj.url && !byUrl.has(pj.url)) {
+          byUrl.set(pj.url, pj);
+          stats.carriedOver++;
+        }
+      }
+    } catch { /* corrupt/absent previous file — start fresh */ }
+  }
+
+  const cutoff = Date.now() - KEEP_DAYS * 24 * 60 * 60 * 1000;
+  const jobs = [...byUrl.values()]
+    .filter((j) => {
+      if (!j.datePosted) return true; // keep undated jobs
+      const t = Date.parse(j.datePosted);
+      if (Number.isNaN(t)) return true;
+      if (t < cutoff) { stats.prunedOld++; return false; }
+      return true;
+    })
+    .sort((a, b) => {
+      const da = a.datePosted ? Date.parse(a.datePosted) : 0;
+      const db = b.datePosted ? Date.parse(b.datePosted) : 0;
+      return db - da; // newest first
+    });
 
   const output = {
     generatedAt: new Date().toISOString(),
     count: jobs.length,
+    keepDays: KEEP_DAYS,
     filters: { dotnet: 'title or description contains .net/dotnet/asp.net', contract: [...CONTRACT_TYPES], countries: [...ALLOWED_COUNTRIES] },
     jobs,
   };
@@ -195,7 +232,7 @@ function main() {
 
   console.log('transform complete');
   console.table(stats);
-  console.log(`kept ${jobs.length} jobs -> ${OUTPUT}`);
+  console.log(`board now has ${jobs.length} jobs (kept ${KEEP_DAYS} days) -> ${OUTPUT}`);
 }
 
 main();
