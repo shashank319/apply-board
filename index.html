@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>.NET Contract Jobs</title>
+  <meta name="description" content="Automated dashboard of .NET contract roles (US)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1><span class="mark">.NET</span> Contract Jobs</h1>
+        <p class="tagline">US contract roles · auto-refreshed · <span id="generated-at">—</span></p>
+      </div>
+
+      <div class="stats" id="stats-bar">
+        <div class="stat"><span class="stat-num" id="stat-open">0</span><span class="stat-label">Open roles</span></div>
+        <div class="stat stat-new"><span class="stat-num" id="stat-new">0</span><span class="stat-label">New today</span></div>
+        <div class="stat stat-applied"><span class="stat-num" id="stat-applied">0</span><span class="stat-label">Applied</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="wrap controls-inner">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="search" placeholder="Search title, company, skills…" autocomplete="off" />
+      </div>
+
+      <select id="filter-location" aria-label="Filter by location"><option value="">All locations</option></select>
+
+      <select id="filter-arrangement" aria-label="Filter by work arrangement">
+        <option value="">Remote &amp; on-site</option>
+        <option value="Remote">Remote</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="On-site">On-site</option>
+      </select>
+
+      <label class="toggle">
+        <input type="checkbox" id="toggle-applied" />
+        <span>Show applied</span>
+      </label>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div id="active-count" class="result-count"></div>
+    <div id="jobs" class="jobs-grid" aria-live="polite"></div>
+    <div id="empty" class="empty" hidden>No roles match your filters.</div>
+
+    <section id="applied-section" class="applied-section" hidden>
+      <button id="applied-toggle" class="applied-header" aria-expanded="true">
+        <span class="chevron">▾</span> Applied roles (<span id="applied-section-count">0</span>)
+      </button>
+      <div id="applied-jobs" class="jobs-grid applied-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Data via Apify · Filtered to <code>.net</code> contract roles · Applied status saved in your browser.</span>
+    </div>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card-top">
+        <span class="badge-arrangement"></span>
+        <span class="badge-applied" hidden>✓ Applied</span>
+      </div>
+      <h2 class="card-title"></h2>
+      <div class="card-company"></div>
+      <div class="card-meta">
+        <span class="meta-location"></span>
+        <span class="meta-rate"></span>
+      </div>
+      <p class="card-desc"></p>
+      <div class="card-skills"></div>
+      <div class="card-footer">
+        <span class="card-date"></span>
+        <div class="card-actions">
+          <button class="btn-undo" hidden>Undo</button>
+          <a class="btn-apply" target="_blank" rel="noopener noreferrer">Apply ↗</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

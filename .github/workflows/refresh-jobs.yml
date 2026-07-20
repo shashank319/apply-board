@@ -1,0 +1,68 @@
+name: Refresh .NET contract jobs
+
+# ─────────────────────────────────────────────────────────────────────────
+# Runs the Apify Actor, filters the results with scripts/transform.js, and
+# commits the fresh jobs.json back to the repo. GitHub Pages then serves it.
+#
+# Data flow:  Apify Actor  ──►  raw/dataset.json  ──►  transform.js  ──►  jobs.json  ──►  git commit  ──►  Pages
+#
+# Requires one repository secret:  APIFY_TOKEN
+#   (Settings ▸ Secrets and variables ▸ Actions ▸ New repository secret)
+# ─────────────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    # 3× per day at 05:00, 13:00 and 21:00 UTC.
+    # To change frequency, edit these cron lines (times are UTC).
+    #   Once daily:      - cron: '0 6 * * *'
+    #   Every 6 hours:   - cron: '0 */6 * * *'
+    #   Twice daily:     - cron: '0 6,18 * * *'
+    - cron: '0 5 * * *'
+    - cron: '0 13 * * *'
+    - cron: '0 21 * * *'
+  workflow_dispatch: {}   # allows manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write          # needed to commit jobs.json
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Apify Actor and download dataset
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          set -euo pipefail
+          mkdir -p raw
+          # run-sync-get-dataset-items runs the Actor and returns the items JSON directly.
+          curl -sS --fail-with-body \
+            -X POST \
+            -H "Content-Type: application/json" \
+            "https://api.apify.com/v2/acts/fantastic-jobs~advanced-linkedin-job-search-api/run-sync-get-dataset-items?token=${APIFY_TOKEN}" \
+            -d @.github/actor-input.json \
+            -o raw/dataset.json
+          echo "Downloaded $(node -e "console.log(JSON.parse(require('fs').readFileSync('raw/dataset.json','utf8')).length)") raw items."
+
+      - name: Transform to filtered jobs.json
+        run: node scripts/transform.js raw/dataset.json jobs.json
+
+      - name: Commit updated jobs.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- jobs.json; then
+            echo "No changes to jobs.json — nothing to commit."
+          else
+            git add jobs.json
+            git commit -m "chore: refresh jobs.json ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

@@ -1,0 +1,8 @@
+{
+  "timeRange": "7d",
+  "limit": 300,
+  "descriptionSearch": [".NET"],
+  "aiEmploymentTypeFilter": ["CONTRACTOR", "TEMPORARY"],
+  "descriptionType": "text",
+  "locationSearch": ["United States"]
+}
