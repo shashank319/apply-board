@@ -4,7 +4,7 @@ A zero-backend static dashboard of **US .NET contract roles**, scraped from Link
 [Apify](https://apify.com), filtered strictly, and auto-refreshed 3× per day by GitHub Actions.
 Hosted free on GitHub Pages.
 
-**Live site:** _(add your Pages URL here after Step 4)_
+**Live site:** https://shashank319.github.io/apply-board/
 
 ---
 
