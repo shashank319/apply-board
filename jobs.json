@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-24T12:15:55.458Z",
-  "count": 262,
+  "generatedAt": "2026-07-25T11:59:23.819Z",
+  "count": 264,
   "keepDays": 14,
   "filters": {
     "dotnet": "title or description contains .net/dotnet/asp.net",
@@ -13,6 +13,56 @@
     ]
   },
   "jobs": [
+    {
+      "id": "job_mqtpft",
+      "url": "https://www.linkedin.com/jobs/view/sr-microsoft-sql-developer-at-accylerate-4445302662",
+      "title": "Sr. Microsoft SQL Developer",
+      "company": "Accylerate",
+      "location": "Mechanicsville, Virginia, United States",
+      "city": "Mechanicsville",
+      "region": "Virginia",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": null,
+      "datePosted": "2026-07-25T05:50:28",
+      "seniority": "Entry level",
+      "skills": [
+        "T-SQL",
+        "SQL Server",
+        "Azure Virtual Machines",
+        "Always On Availability Groups",
+        "SSIS",
+        "Databricks",
+        ".NET Core",
+        "C#"
+      ],
+      "description": "Ideal Candidate Profile: Seeking a Sr. Microsoft SQL Developer who will support the modernization of an enterprise tolling transaction platform undergoing a partial rewrite using microservices and modularization. This role is a critical part of the Agile/Scrum project team and is responsible for developing, optimizing,…"
+    },
+    {
+      "id": "job_2ypfqn",
+      "url": "https://www.linkedin.com/jobs/view/net-architect-%E2%80%94-ai-assisted-engineering-at-lotus-tg-llc-4444648142",
+      "title": "NET Architect — AI-Assisted Engineering",
+      "company": "Lotus TG LLC",
+      "location": "Berkeley Heights, New Jersey, United States",
+      "city": "Berkeley Heights",
+      "region": "New Jersey",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": null,
+      "datePosted": "2026-07-25T00:58:12",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        ".NET Core",
+        "ASP.NET Core",
+        "C#",
+        "AI Coding Assistants",
+        "Code Modernization",
+        "High Level Design (HLD)",
+        "Low Level Design (LLD)",
+        "REST APIs"
+      ],
+      "description": "If you have been using Copilot or Claude to actually modernize a legacy .NET codebase — not evaluate the tools, but ship with them — this role was written for you. A Fortune 500 financial technology company is changing how its .NET estate gets built, understood and modernized. They want an architect who has done AI-ass…"
+    },
     {
       "id": "job_135r1oy",
       "url": "https://www.linkedin.com/jobs/view/full-stack-net-developer-at-kforce-inc-4433523516",
