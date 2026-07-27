@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-26T11:58:26.300Z",
-  "count": 275,
+  "generatedAt": "2026-07-27T13:35:28.220Z",
+  "count": 281,
   "keepDays": 14,
   "filters": {
     "dotnet": "title or description contains .net/dotnet/asp.net",
@@ -13,6 +13,106 @@
     ]
   },
   "jobs": [
+    {
+      "id": "job_1n89hnz",
+      "url": "https://www.linkedin.com/jobs/view/net-developer-at-tecbrains-4445919222",
+      "title": ".Net developer",
+      "company": "Tecbrains",
+      "location": "Florida, United States",
+      "city": null,
+      "region": "Florida",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": null,
+      "datePosted": "2026-07-27T07:59:52",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        ".Net Framework",
+        ".Net Core",
+        "C#",
+        "ASP.NET Core MVC",
+        "ASP.NET Web APIs",
+        "Entity Framework Core",
+        "T-SQL",
+        "MS SQL Server"
+      ],
+      "description": "Skills Required Minimum 4 years of experience in analysis, design and coding Minimum 4 years of experience: .Net Framework and .Net Core C# ASP.NET Core MVC ASP.NET Web APIs Entity Framework Core OLAP Database Design/Development T-SQL MS SQL Server XML/HTML/DHTML/CSS/JavaScript/JQuery/AJAX Must have experience designin…"
+    },
+    {
+      "id": "job_zqe6gk",
+      "url": "https://www.linkedin.com/jobs/view/lifeguard-outdoor-pools-parks-at-monmouth-county-shade-tree-com-4445633477",
+      "title": "Lifeguard - Outdoor Pools - Parks",
+      "company": "Monmouth County Shade Tree Com",
+      "location": "Englishtown, New Jersey, United States",
+      "city": "Englishtown",
+      "region": "New Jersey",
+      "arrangement": "On-site",
+      "employmentType": "TEMPORARY",
+      "rate": "$50k – $75k/yr",
+      "datePosted": "2026-07-26T20:40:18",
+      "seniority": "Entry level",
+      "skills": [
+        "Payroll Processing",
+        "Timekeeping",
+        "Purchasing",
+        "Legal Representation",
+        "Contract Drafting",
+        "Web Development",
+        "ASP.NET",
+        "SQL Server"
+      ],
+      "description": "Office Administrator (Payroll, Timekeeping & Purchasing) Provides essential office support within the Library Administration department for our 13-branch library system. This role coordinates centralized payroll timekeeping and purchasing, handles high-volume administrative tasks and provides daily clerical support to…"
+    },
+    {
+      "id": "job_d1nf0x",
+      "url": "https://www.linkedin.com/jobs/view/senior-dotnet-developer-at-soho-square-solutions-4442377592",
+      "title": "Senior Dotnet Developer",
+      "company": "Soho Square Solutions",
+      "location": "Sparks Glencoe, Maryland, United States",
+      "city": "Sparks Glencoe",
+      "region": "Maryland",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": "$60 – $70/hr",
+      "datePosted": "2026-07-26T19:44:03",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        "C#",
+        ".NET",
+        "Microsoft SQL Server",
+        "MVC",
+        "Agile/Scrum",
+        "JavaScript",
+        "Angular",
+        "Web Services"
+      ],
+      "description": "Role-.Net Developer Location- Sparks, MD, 21152 Job Summary: The Staff Software Engineer will assist in development of building, integration, and deployment of medical device instrument software. The right candidate is a positive, forward-looking person who collaborates often and effectively with project team members o…"
+    },
+    {
+      "id": "job_1lb3xgg",
+      "url": "https://www.linkedin.com/jobs/view/net-engineer-remote-at-hired-4445615580",
+      "title": ".NET Engineer (Remote)",
+      "company": "Hired",
+      "location": "United States",
+      "city": null,
+      "region": null,
+      "arrangement": "Remote",
+      "employmentType": "CONTRACTOR",
+      "rate": "$30 – $90/hr",
+      "datePosted": "2026-07-26T13:29:29.435",
+      "seniority": "Associate",
+      "skills": [
+        "C#",
+        "ASP.NET Core",
+        ".NET Framework",
+        "RESTful API",
+        "SQL Server",
+        "Entity Framework",
+        "HTML",
+        "CSS"
+      ],
+      "description": "Role: .NET Engineer (Remote) Location: Remote (Work from Anywhere) Job Type: Contract Payout: $30 - $90/hour Role Overview: We are hiring for one of our clients, seeking a .NET Engineer to work on a contract basis. The role involves developing and maintaining .NET applications, ensuring high performance and scalability…"
+    },
     {
       "id": "job_1lue5zo",
       "url": "https://www.linkedin.com/jobs/view/senior-mulesoft-developer-at-system-one-4445391757",
@@ -311,6 +411,56 @@
         "REST APIs"
       ],
       "description": "If you have been using Copilot or Claude to actually modernize a legacy .NET codebase — not evaluate the tools, but ship with them — this role was written for you. A Fortune 500 financial technology company is changing how its .NET estate gets built, understood and modernized. They want an architect who has done AI-ass…"
+    },
+    {
+      "id": "job_y9qpqh",
+      "url": "https://www.linkedin.com/jobs/view/senior-database-administrator-with-security-clearance-at-cgs-federal-contact-government-services-4445604534",
+      "title": "Senior Database Administrator with Security Clearance",
+      "company": "CGS Federal (Contact Government Services)",
+      "location": "Dallas, Texas, United States",
+      "city": "Dallas",
+      "region": "Texas",
+      "arrangement": "Hybrid",
+      "employmentType": "CONTRACTOR",
+      "rate": "$89k – $121k/yr",
+      "datePosted": "2026-07-25T00:00:00",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        "Microsoft SQL Server",
+        "Database Administration",
+        "SQL Replication",
+        "Backup and Restore",
+        "Capacity Planning",
+        "Reporting Services",
+        "Analysis Services",
+        "Integration Services"
+      ],
+      "description": "Senior Database Administrator Dallas, TX / Remote / Hybrid / Austin, TX Information Technology / Full Time Hybrid / Hybrid Senior Database Administrator Employment Type: Full-Time, Mid Level Department: Information Technology Contact Government Services is seeking a Senior Database Administrator to assist with administ…"
+    },
+    {
+      "id": "job_y9rgp7",
+      "url": "https://www.linkedin.com/jobs/view/senior-database-administrator-with-security-clearance-at-cgs-federal-contact-government-services-4445605463",
+      "title": "Senior Database Administrator with Security Clearance",
+      "company": "CGS Federal (Contact Government Services)",
+      "location": "New York, United States",
+      "city": "New York",
+      "region": "New York",
+      "arrangement": "Hybrid",
+      "employmentType": "CONTRACTOR",
+      "rate": "$89k – $121k/yr",
+      "datePosted": "2026-07-25T00:00:00",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        "Microsoft SQL Server",
+        "SQL Replication",
+        "Backup and Restore",
+        "Capacity Planning",
+        "Reporting Services",
+        "Analysis Services",
+        "Integration Services",
+        "Database Migration"
+      ],
+      "description": "Senior Database Administrator New York, NY / Remote / Hybrid / Albany, NY Information Technology / Full Time Hybrid / Hybrid Senior Database Administrator Employment Type: Full-Time, Mid Level Department: Information Technology Contact Government Services is seeking a Senior Database Administrator to assist with admini…"
     },
     {
       "id": "job_135r1oy",
