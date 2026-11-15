@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T16:48:54.842Z",
-  "count": 286,
+  "generatedAt": "2026-11-15T17:30:55.422Z",
+  "count": 288,
   "keepDays": 14,
   "filters": {
     "dotnet": "title or description contains .net/dotnet/asp.net",
@@ -13,6 +13,31 @@
     ]
   },
   "jobs": [
+    {
+      "id": "job_k4bavp",
+      "url": "https://www.linkedin.com/jobs/view/senior-full-stack-developer-at-n2p-systems-4490209059",
+      "title": "Senior Full Stack Developer",
+      "company": "N2P Systems",
+      "location": "Nashville, Tennessee, United States",
+      "city": "Nashville",
+      "region": "Tennessee",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": null,
+      "datePosted": "2026-11-14T22:24:00",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        "C#",
+        ".NET Core",
+        "ASP.NET Core",
+        "Web API",
+        "React.js",
+        "TypeScript",
+        "JavaScript",
+        "Artificial Intelligence"
+      ],
+      "description": "N2P Systems is seeking an experienced Senior Full Stack Developer to join our enterprise technology delivery team in Nashville, TN, USA. At N2P Systems, you will put 10+ years of hands-on experience with C#, .NET Core and ASP.NET Core to work on mission-critical enterprise systems. This is an existing contract, on-site…"
+    },
     {
       "id": "job_19l49s5",
       "url": "https://www.linkedin.com/jobs/view/dhs-application-technical-specialist-master-%E2%80%93-rpa-ai-and-power-platform-at-revcats-4489308628",
@@ -434,6 +459,31 @@
         "Legacy Modernization"
       ],
       "description": "Our client, a US Fortune 50 organization and a leading provider of Health care and Health Insurance services, seeks an accomplished Front End .Net Developer ______________________________________________________________________ NOTE: THIS IS 100% REMOTE ROLE & ONLY W2 CANDIDATES (NO C2C/1099). *** Candidate must be aut…"
+    },
+    {
+      "id": "job_3v3q3",
+      "url": "https://www.linkedin.com/jobs/view/software-packaging-consultant-software-packaging-technical-specialist-at-raas-infotek-4490748626",
+      "title": "Software Packaging Consultant / Software Packaging Technical Specialist",
+      "company": "Raas Infotek",
+      "location": "Houston, Texas, United States",
+      "city": "Houston",
+      "region": "Texas",
+      "arrangement": "On-site",
+      "employmentType": "CONTRACTOR",
+      "rate": null,
+      "datePosted": "2026-11-13T17:00:09",
+      "seniority": "Associate",
+      "skills": [
+        "Software Packaging",
+        "Application Deployment",
+        "MSIX",
+        "Numecent",
+        "PSApp Deploy",
+        "Ansible",
+        "PowerShell",
+        "Application Virtualization"
+      ],
+      "description": "Hi Hope You are doing well | We have an urgent below position .If you are interested please share your updated resume with the rate expectation. Job Title: Software Packaging Consultant / Software Packaging Technical Specialist Location: Houston TX_Onsite Job Description: This role performs system integrations across C…"
     },
     {
       "id": "job_1dty09s",
@@ -4578,6 +4628,31 @@
       "description": "Location: DMV Area (Hybrid – Primarily Remote) (Relocation Accepted in EST) Experience: 8+ Years Work Model: Hybrid Employment Type: Contract Job Summary We are looking for an experienced Senior Full Stack Developer with 8+ years of professional software engineering experience and strong hands-on expertise in GraphQL A…"
     },
     {
+      "id": "job_10yo5f4",
+      "url": "https://www.linkedin.com/jobs/view/senior-database-administrator-ii-with-security-clearance-at-cgs-federal-contact-government-services-4488721472",
+      "title": "Senior Database Administrator II with Security Clearance",
+      "company": "CGS Federal (Contact Government Services)",
+      "location": "Baltimore, Maryland, United States",
+      "city": "Baltimore",
+      "region": "Maryland",
+      "arrangement": "Hybrid",
+      "employmentType": "CONTRACTOR",
+      "rate": "$115k – $166k/yr",
+      "datePosted": "2026-11-06T00:00:00",
+      "seniority": "Mid-Senior level",
+      "skills": [
+        "Microsoft SQL Server Administration",
+        "Database Replication",
+        "Database Backup and Restore",
+        "Capacity Planning",
+        "SQL Server Reporting Services",
+        "SQL Server Analysis Services",
+        "SQL Server Integration Services",
+        "Database Migration"
+      ],
+      "description": "Senior Database Administrator II Baltimore, MD / Remote / Hybrid / Rockville, MD Information Technology / Full Time Hybrid / Hybrid Apply for this job Senior Database Administrator II Employment Type: Full-Time, Mid Level Department: Information Technology Contact Government Services is seeking a Senior Database Admini…"
+    },
+    {
       "id": "job_q4h5wh",
       "url": "https://www.linkedin.com/jobs/view/sr-net-application-dev-sharepoint-power-automate-oracle-microsoft-dynamics-crm-salesforce-at-soho-dragon-4487380315",
       "title": "Sr .NET Application Dev, SharePoint, Power Automate, Oracle & Microsoft Dynamics CRM/Salesforce",
@@ -7124,31 +7199,6 @@
         "Secrets Management"
       ],
       "description": "Hello Hope you are doing well !! Kindly review the role shared below and provide me with a copy of the updated resume. Job Role – Tooling Engineer (Harness) Location: Onsite – Atlanta, GA Duration: 6 Months Required Skills 10–12 years of experience in Software Engineering, Platform Engineering, or Solution Architecture…"
-    },
-    {
-      "id": "job_fxccfl",
-      "url": "https://www.linkedin.com/jobs/view/software-engineer-iv-at-solomon-page-4483073101",
-      "title": "Software Engineer IV",
-      "company": "Solomon Page",
-      "location": "United States",
-      "city": null,
-      "region": null,
-      "arrangement": "On-site",
-      "employmentType": "CONTRACTOR",
-      "rate": null,
-      "datePosted": "2026-10-31T17:33:21.215",
-      "seniority": "Not Applicable",
-      "skills": [
-        "C#",
-        ".NET",
-        "ASP.NET",
-        ".NET Core",
-        "Microservices",
-        "Relational Databases",
-        "NoSQL Databases",
-        "Event-Driven Architecture"
-      ],
-      "description": "Our client is seeking an experienced Software Engineer IV to lead the development of features for its marketplace purchase platforms, with a focus on improving payment infrastructure and systems. The ideal candidate will bring strong expertise in C# and .NET, microservices, cloud-based architecture, and high-volume, hi…"
     }
   ]
 }
